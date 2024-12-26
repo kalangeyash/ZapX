@@ -4,9 +4,14 @@ import { TiLocationArrow } from 'react-icons/ti';
 
 const navItems = ['Nexus' , 'Vault' ,'Prologue', 'About', 'Contact']
 
+
 const Navbar = () => {
 
     const navContainerRef = useRef(null);
+    const audioElementRef = useRef(null)
+    const toggleAudioIndicator = () =>{
+
+    }
 
   return (
     <div ref = {navContainerRef} className='fixed inset-x-0 top-4 z-50 h-6 border-none transition-all duration-700 sm:inset-x6'>
@@ -30,8 +35,17 @@ const Navbar = () => {
                         ))}
                     </div>
                 </div>
-                <button className='ml-10 flex items-center space-x-0.5'>/</button>
-                </div>
+                        <button onClick={toggleAudioIndicator} className='ml10 flex items-center space-x-0.5'>
+                            <audio ref={audioElementRef} className='hidden' src='/audio/loop.mp3' loop>
+                            {[1,2,3,4].map((bar)=>{
+                                <div key={bar} className={`indicator-line ${isIndicatorAzctive ? 'actve' : ' '}`}>
+
+                                </div>
+                            })}
+
+                            </audio>
+                        </button>
+                </div> 
 
             </nav>
         </header>
