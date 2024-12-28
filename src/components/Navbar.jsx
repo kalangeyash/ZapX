@@ -61,11 +61,11 @@ const Navbar = () => {
     },[isAudioPlaying])
 
   return (
-    <div ref = {navContainerRef} className='fixed inset-x-0 top-4 z-50 h-6 border-none transition-all duration-700 sm:inset-x6'>
-        <header className='absolute top-1/2 w-full -traslate-y-1/2'>
+    <div ref = {navContainerRef} className=' fixed inset-x-0 top-4 z-50 h-6 border-none transition-all duration-700 sm:inset-x6'>
+        <header className='absolute top-1/2 w-full -traslate-y-1/2 '>
             <nav className='flex size-full items-center justify-around p-4'>
                 <div className='flex items-center gap-7'>
-                    <img src='/img/logo.png' alt='logo' className='w-10' />
+                    <img src='/img/vr-goggles.png' alt='logo' className='w-10' />
                 
                 <Button
                 id="product-button"
